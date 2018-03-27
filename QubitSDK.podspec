@@ -28,7 +28,7 @@ s.source       = { :git => "https://github.com/qubitdigital/qubit-sdk-ios.git", 
 
 #s.ios.vendored_frameworks = 'Framework/QubitSDK.framework'
 s.source_files = 'QBTracker/QubitSDK/**/*.{swift}'
-s.preserve_path = '**/*.{modulemap}'
+s.preserve_paths = '**/*.{modulemap}'
 s.resources = 'QBTracker/QubitSDK/Database/*.{xcdatamodeld}'
 
 s.framework  = "CoreData"
