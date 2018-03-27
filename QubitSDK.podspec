@@ -19,18 +19,15 @@ s.authors      = { "Dariusz Zajac" => "dariusz.zajac@miquido.com", "Pavlo Davydi
 
 s.platform     = :ios, "9.0"
 
-s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0.3', "ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES" => "YES",
-'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/QBTracker/CommonCrypto' }
+s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0.3', "ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES" => "YES" }
 
 s.source       = { :git => "https://github.com/qubitdigital/qubit-sdk-ios.git", :tag => "#{s.version}" }
-
 #s.ios.vendored_frameworks = 'Framework/QubitSDK.framework'
 s.source_files = 'QBTracker/QubitSDK/**/*.{swift}'
 s.preserve_paths = 'QBTracker/QubitSDK/CommonCrypto/module.modulemap'
 s.resources = 'QBTracker/QubitSDK/Database/*.{xcdatamodeld}'
-#s.xcconfig = { 'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/QBTracker/QubitSDK/CommonCrypto' }
+s.xcconfig = { 'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/QBTracker/QubitSDK/CommonCrypto' }
 
 s.framework  = "CoreData"
-
 
 end
