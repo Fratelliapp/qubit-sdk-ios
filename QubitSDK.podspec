@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
 
   s.framework  = "CoreData"
 
-s.xcconfig = {'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/QBTracker/CommonCrypto' }
+s.xcconfig = {'SWIFT_INCLUDE_PATHS' => '${SRCROOT}/CommonCrypto' }
 s.preserve_paths = 'QBTracker/CommonCrypto/module.modulemap'
 
 end
