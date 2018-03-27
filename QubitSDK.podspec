@@ -26,11 +26,11 @@ s.source       = { :git => "https://github.com/qubitdigital/qubit-sdk-ios.git", 
 
 #s.ios.vendored_frameworks = 'Framework/QubitSDK.framework'
 s.source_files = 'QBTracker/QubitSDK/**/*.{swift}'
-s.preserve_paths = '**/*.{modulemap}'
+s.preserve_paths = 'QBTracker/QubitSDK/CommonCrypto/module.modulemap'
 s.resources = 'QBTracker/QubitSDK/Database/*.{xcdatamodeld}'
+#s.xcconfig = { 'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/QBTracker/QubitSDK/CommonCrypto' }
 
 s.framework  = "CoreData"
 
-#s.xcconfig = { 'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/QBTracker/CommonCrypto' }
 
 end
