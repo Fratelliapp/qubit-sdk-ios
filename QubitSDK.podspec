@@ -22,8 +22,6 @@ s.platform     = :ios, "9.0"
 s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0.3', "ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES" => "YES",
 'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/QBTracker/CommonCrypto' }
 
-s.preserve_paths = 'QBTracker/CommonCrypto/module.modulemap'
-
 s.source       = { :git => "https://github.com/qubitdigital/qubit-sdk-ios.git", :tag => "#{s.version}" }
 
 #s.ios.vendored_frameworks = 'Framework/QubitSDK.framework'
