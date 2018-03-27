@@ -24,7 +24,7 @@ s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0.3', "ALWAYS_EMBED_SWIFT_STANDA
 s.source       = { :git => "https://github.com/qubitdigital/qubit-sdk-ios.git", :tag => "#{s.version}" }
 s.source_files = 'QBTracker/QubitSDK/**/*.{swift}'
 s.preserve_paths = 'QBTracker/QubitSDK/CommonCrypto/module.modulemap'
-s.resources = 'QBTracker/QubitSDK/Database/*.{xcdatamodeld}, QBTracker/QubitSDK/CommonCrypto/module.modulemap'
+s.resources = {'QBTracker/QubitSDK/Database/*.{xcdatamodeld}', 'QBTracker/QubitSDK/CommonCrypto/module.modulemap'}
 s.xcconfig = { 'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/QBTracker/QubitSDK/CommonCrypto' }
 
 s.framework  = "CoreData"
