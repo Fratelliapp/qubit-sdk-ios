@@ -65,6 +65,14 @@
 		B9987BA01F6C478800CA6AB7 /* configuration_entity.json in Resources */ = {isa = PBXBuildFile; fileRef = B9987B9F1F6C478800CA6AB7 /* configuration_entity.json */; };
 		B9987BA41F6C4D7A00CA6AB7 /* QBEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9987BA11F6C4D2A00CA6AB7 /* QBEntityTests.swift */; };
 		B9ABEC361F6AC49200C6217B /* QBDispatchQueueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ABEC351F6AC49200C6217B /* QBDispatchQueueService.swift */; };
+		B9F8E519206A32A30027B92C /* CommonSymmetricKeywrap.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F8E511206A32A30027B92C /* CommonSymmetricKeywrap.h */; };
+		B9F8E51A206A32A30027B92C /* CommonRandom.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F8E512206A32A30027B92C /* CommonRandom.h */; };
+		B9F8E51B206A32A30027B92C /* CommonCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F8E513206A32A30027B92C /* CommonCryptor.h */; };
+		B9F8E51C206A32A30027B92C /* CommonHMAC.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F8E514206A32A30027B92C /* CommonHMAC.h */; };
+		B9F8E51D206A32A30027B92C /* CommonDigest.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F8E515206A32A30027B92C /* CommonDigest.h */; };
+		B9F8E51E206A32A30027B92C /* CommonCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F8E516206A32A30027B92C /* CommonCrypto.h */; };
+		B9F8E51F206A32A30027B92C /* CommonKeyDerivation.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F8E517206A32A30027B92C /* CommonKeyDerivation.h */; };
+		B9F8E520206A32A30027B92C /* CommonCryptoError.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F8E518206A32A30027B92C /* CommonCryptoError.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,7 +190,15 @@
 		B9987B9F1F6C478800CA6AB7 /* configuration_entity.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = configuration_entity.json; sourceTree = "<group>"; };
 		B9987BA11F6C4D2A00CA6AB7 /* QBEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QBEntityTests.swift; sourceTree = "<group>"; };
 		B9ABEC351F6AC49200C6217B /* QBDispatchQueueService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QBDispatchQueueService.swift; sourceTree = "<group>"; };
-		B9F8E50D206982E20027B92C /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		B9F8E50F206A32A30027B92C /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = QubitSDK/CommonCrypto/module.modulemap; sourceTree = SOURCE_ROOT; };
+		B9F8E511206A32A30027B92C /* CommonSymmetricKeywrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonSymmetricKeywrap.h; sourceTree = "<group>"; };
+		B9F8E512206A32A30027B92C /* CommonRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonRandom.h; sourceTree = "<group>"; };
+		B9F8E513206A32A30027B92C /* CommonCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonCryptor.h; sourceTree = "<group>"; };
+		B9F8E514206A32A30027B92C /* CommonHMAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHMAC.h; sourceTree = "<group>"; };
+		B9F8E515206A32A30027B92C /* CommonDigest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDigest.h; sourceTree = "<group>"; };
+		B9F8E516206A32A30027B92C /* CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonCrypto.h; sourceTree = "<group>"; };
+		B9F8E517206A32A30027B92C /* CommonKeyDerivation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonKeyDerivation.h; sourceTree = "<group>"; };
+		B9F8E518206A32A30027B92C /* CommonCryptoError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonCryptoError.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -440,9 +456,26 @@
 		B9F8E50C206982E20027B92C /* CommonCrypto */ = {
 			isa = PBXGroup;
 			children = (
-				B9F8E50D206982E20027B92C /* module.modulemap */,
+				B9F8E510206A32A30027B92C /* CommonCrypto */,
+				B9F8E50F206A32A30027B92C /* module.modulemap */,
 			);
 			path = CommonCrypto;
+			sourceTree = SOURCE_ROOT;
+		};
+		B9F8E510206A32A30027B92C /* CommonCrypto */ = {
+			isa = PBXGroup;
+			children = (
+				B9F8E511206A32A30027B92C /* CommonSymmetricKeywrap.h */,
+				B9F8E512206A32A30027B92C /* CommonRandom.h */,
+				B9F8E513206A32A30027B92C /* CommonCryptor.h */,
+				B9F8E514206A32A30027B92C /* CommonHMAC.h */,
+				B9F8E515206A32A30027B92C /* CommonDigest.h */,
+				B9F8E516206A32A30027B92C /* CommonCrypto.h */,
+				B9F8E517206A32A30027B92C /* CommonKeyDerivation.h */,
+				B9F8E518206A32A30027B92C /* CommonCryptoError.h */,
+			);
+			name = CommonCrypto;
+			path = QubitSDK/CommonCrypto/CommonCrypto;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -452,6 +485,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9F8E51E206A32A30027B92C /* CommonCrypto.h in Headers */,
+				B9F8E51C206A32A30027B92C /* CommonHMAC.h in Headers */,
+				B9F8E51A206A32A30027B92C /* CommonRandom.h in Headers */,
+				B9F8E51B206A32A30027B92C /* CommonCryptor.h in Headers */,
+				B9F8E51D206A32A30027B92C /* CommonDigest.h in Headers */,
+				B9F8E520206A32A30027B92C /* CommonCryptoError.h in Headers */,
+				B9F8E519206A32A30027B92C /* CommonSymmetricKeywrap.h in Headers */,
+				B9F8E51F206A32A30027B92C /* CommonKeyDerivation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -901,10 +942,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qubit.QBTracker;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
-				SWIFT_INCLUDE_PATHS = "${SRCROOT}/CommonCrypto";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/QubitSDK/CommonCrypto";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME).h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -932,10 +974,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qubit.QBTracker;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
-				SWIFT_INCLUDE_PATHS = "${SRCROOT}/CommonCrypto";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/QubitSDK/CommonCrypto";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME).h";
 				SWIFT_VERSION = 4.0;
