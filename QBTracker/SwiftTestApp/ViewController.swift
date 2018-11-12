@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var eventsLabel: UILabel!
     
     override func viewDidLoad() {
-        QubitSDK.start(withTrackingId: "miquido", logLevel: .verbose)
+        QubitSDK.start(withTrackingId: "miquido", logLevel: .debug)
         super.viewDidLoad()
     }
     
@@ -31,11 +31,15 @@ class ViewController: UIViewController {
     }
     
     private func fetchExperiences() {
-        QubitSDK.fetchExperiences(withIds: [139731], onSuccess: { (experiences) in
-            experiences.first?.shown()
+        QubitSDK.fetchExperiences(withIds: [143640], onSuccess: { (experiences) in
+            if let exp = experiences.first {
+                // exp.payload [String: Any] contains the values set in app.qubit.com
+                // Call the shown method once the user experience has been changed
+                exp.shown()
+            }
         }, onError: { (error) in
             print("Got error: \(error.localizedDescription)")
-        })
+        }, preview: true, ignoreSegments: true)
     }
     
     @IBAction func tapOnEventButton(_ sender: UIButton) {

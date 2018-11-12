@@ -42,10 +42,10 @@ final class QBExperiencesEntity: DictionaryInitializable {
 public final class QBExperienceEntity: NSObject, NSCoding {
 
     let callback: String
-    let isControl: Bool
-    let experienceId: Int
-    let variationId: Int
-    let payload: [String: Any]
+    public var isControl: Bool
+    public var experienceId: Int
+    public var variationId: Int
+    public var payload: [String: Any]
     
     init(callback: String, isControl: Bool, experienceId: Int, variationId: Int, payload: [String: Any]) {
         self.callback = callback
@@ -92,7 +92,16 @@ extension QBExperienceEntity {
             }
             
             var request = URLRequest(url: url)
-            request.httpMethod = HTTPMethod.post.rawValue
+            request.httpMethod = "POST"
+            let requestBody: [String: Any] = ["id": QubitSDK.deviceId]
+            let jsonBody: Data
+            do {
+                jsonBody = try JSONSerialization.data(withJSONObject: requestBody, options: [])
+                request.httpBody = jsonBody
+            } catch {
+                print("Error: cannot create JSON")
+                return
+            }
             URLSession.shared.dataTask(with: request).resume()
             
             QBLog.info("Callback URL: \(self.callback) was invoked")
